@@ -46,6 +46,14 @@ const Background = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    height: 85vh;
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 767px) {
+    height: 75vh;
+  }
 `;
 
 const Container = styled.div`
@@ -62,11 +70,79 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    max-width: 550px;
+  }
+
+  @media screen and (min-width: 550px) and (max-width: 767px) {
+    max-width: 450px;
+    margin-top: 13vh;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 550px) {
+    max-width: 350px;
+    margin-top: 13vh;
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 375px) {
+    max-width: auto;
+    margin-top: 13vh;
+  }
+
+  h4 {
+    margin: 1vh 0;
+    color: #fff;
+  }
+
   img {
     width: 100%;
     height: auto;
     display: block;
     max-width: 600px;
     object-fit: contain;
+    margin-bottom: 1vh;
+  }
+  > .get-bundle-btn {
+    outline: none;
+    border: none;
+    padding: 11.5px 15px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #0063e5;
+    color: #f9f9f9;
+    font-size: 18px;
+    border-radius: 0.145rem;
+    transition: all 0.7s ease-in-out;
+
+    @media screen and (min-width: 550px) and (max-width: 1200px) {
+      padding: 10px 0;
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 280px) and (max-width: 550px) {
+      padding: 5px 0;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background: #0085ff;
+    }
+  }
+  > .links {
+    outline: none;
+    border: none;
+    font-size: 19px;
+    background-color: transparent;
+    color: #f9f9f9;
+
+    @media screen and (min-width: 280px) and (max-width: 550px) {
+      font-size: 15px;
+    }
+  }
+  > .text-gary {
+    color: gray;
   }
 `;
